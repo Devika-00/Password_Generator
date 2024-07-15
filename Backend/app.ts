@@ -15,24 +15,25 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(
   cors({
-    origin: true,
+    origin: "https://password-generator-feva.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 
 app.use("/api", userRoute);
 app.use(errorHandlingMidleware);
-app.get("/test",(req,res)=>{
-  res.send("Haiiiiii")
-})
+
+app.get("/test", (req, res) => {
+  res.send("Haiiiiii");
+});
 
 app.all("*", (req, res, next) => {
-    next(new CustomError(`Not found ${req.url}`, 404));
-  });
+  next(new CustomError(`Not found ${req.url}`, 404));
+});
 
-  const port = ENV.PORT || 3000;
-  
-  app.listen(port, () => {
-    connectDb();
-    console.log(`[server]: Server is running at http://localhost:${port}`);
-  }); 
+const port = ENV.PORT || 3000;
+
+app.listen(port, () => {
+  connectDb();
+  console.log(`[server]: Server is running at http://localhost:${port}`);
+});

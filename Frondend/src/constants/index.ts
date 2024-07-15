@@ -1,1 +1,1 @@
-export const SERVER_URL = "https://password-generator-ytkv.onrender.com/";
+export const SERVER_URL = "https://password-generator-ytkv.onrender.com";
