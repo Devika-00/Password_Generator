@@ -22,6 +22,9 @@ app.use(
 
 app.use("/api", userRoute);
 app.use(errorHandlingMidleware);
+app.get("/test",(req,res)=>{
+  res.send("Haiiiiii")
+})
 
 app.all("*", (req, res, next) => {
     next(new CustomError(`Not found ${req.url}`, 404));
