@@ -5,8 +5,7 @@
   "main": "app.ts",
   "scripts": {
     "build": "npx tsc",
-    "start": "node dist/app.js",
-    "dev": "nodemon app.ts"
+    "start": "nodemon app.ts"
   },
   "author": "",
   "license": "ISC",
