@@ -20,7 +20,6 @@ const PasswordGenerator: React.FC = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [passwordName, setPasswordName] = useState<string>('');
 
-  const userName = useAppSelector((state) => state.user.name);
   const id = useAppSelector((state) => state.user.id);
 
   const handleGeneratePassword = () => {

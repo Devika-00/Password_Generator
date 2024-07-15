@@ -64,8 +64,8 @@ const Login: React.FC = () => {
       showToast(data.message);
       resetForm();
       navigate("/");
-    } catch ({response}) {
-      showToast(response.data.message, "error");
+    } catch (error:any) {
+      showToast(error.message, "error");
     }
   };
 
