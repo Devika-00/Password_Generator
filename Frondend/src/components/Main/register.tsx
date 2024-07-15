@@ -28,8 +28,8 @@ const Register: React.FC = () => {
           showToast('Register Successfully Login Now', 'success');
           navigate('/login'); 
       }
-    } catch (error) {
-      showToast('Registration failed', 'error');
+    } catch (error:any) {
+      showToast(error, 'error');
     }
   };
 
