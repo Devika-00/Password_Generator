@@ -17,6 +17,7 @@ app.use(
   cors({
     origin: "https://password-generator-feva.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
 );
 
